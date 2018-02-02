@@ -5,7 +5,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Login
+        <button
+          onClick={() => {
+            window.FB.login((response) => {
+              console.log('logging in', response);
+            });
+          }}
+        >
+          Login
+        </button>
       </div>
     );
   }
