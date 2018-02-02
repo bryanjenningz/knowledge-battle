@@ -50,6 +50,10 @@
           version    : 'v2.12'
         });
         FB.AppEvents.logPageView();
+
+        FB.login(function(response) {
+          console.log('logging in', response);
+        });
       };
 
       (function(d, s, id){
